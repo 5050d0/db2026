@@ -1,0 +1,44 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage[a4paper,left=2cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{tabularx}
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+%\PolyglossiaSetup{russian}{indentfirst=true}
+\SetLanguageKeys{russian}{indentfirst=true}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+
+\setmainfont{Times New Roman}
+\setromanfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+\newfontfamily{\cyrillicfont}{Times New Roman}
+\newfontfamily{\cyrillicfontrm}{Times New Roman}
+\newfontfamily{\cyrillicfonttt}{Courier New}
+\newfontfamily{\cyrillicfontsf}{Arial}
+
+\usepackage{graphicx}
+\graphicspath{{img/}}
+
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\usepackage{xcolor, listings}
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  inputpath=..,
+  numbers=left,
+  showstringspaces=false,
+  %upquote=true,
+  xleftmargin=\parindent,
+  breaklines=true,
+  tabsize=2,
+  keepspaces=true,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+}
+\renewcommand{\lstlistingname}{Листинг}
