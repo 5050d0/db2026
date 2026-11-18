@@ -41,10 +41,11 @@ CREATE TABLE documents (
     ip_address inet NOT NULL,
     title text NOT NULL,
     additional_info text,
-    is_moderated boolean NOT NULL DEFAULT false,
+    moderation_status text NOT NULL DEFAULT 'in_progress',
     document_type text NOT NULL,
     content bytea NOT NULL,
-    CHECK (parent_version <> document_id)
+    CHECK (parent_version <> document_id),
+    CHECK (moderation_status IN ('in_progress', 'rejected', 'revision', 'approved'))
 );
 
 CREATE TABLE favorites (
